@@ -1,0 +1,24 @@
+function H = hessian3d(imgs,s)
+    % [gx,gy,gz] = imgradientxyz(imgs);
+    % [gxx,gxy,gxz] = imgradientxyz(gx);
+    % [gyx,gyy,gyz] = imgradientxyz(gy);
+    % [gzx,gzy,gzz] = imgradientxyz(gz);
+    h = ceil(6*s);
+    G = imgaussfilt3(imgs,s,'FilterSize',h+mod(h+1,2));
+    hx = fspecial3('sobel','X');
+    hy = fspecial3('sobel','Y');
+    hz = fspecial3('sobel','Z');
+    H = zeros(size(imgs,1),size(imgs,2),size(imgs,3),3,3);
+    gx = imfilter(G,hx);
+    gy = imfilter(G,hy);
+    gz = imfilter(G,hz);
+    H(:,:,:,1,1) = imfilter(gx,hx);
+    H(:,:,:,1,2) = imfilter(gx,hy);
+    H(:,:,:,1,3) = imfilter(gx,hz);
+    H(:,:,:,2,1) = imfilter(gy,hx);
+    H(:,:,:,2,2) = imfilter(gy,hy);
+    H(:,:,:,2,3) = imfilter(gy,hz);
+    H(:,:,:,3,1) = imfilter(gz,hx);
+    H(:,:,:,3,2) = imfilter(gz,hy);
+    H(:,:,:,3,3) = imfilter(gz,hz);
+end
