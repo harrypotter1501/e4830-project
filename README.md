@@ -1,4 +1,4 @@
 # e4830-project
 
-## Vasculature Analysis in Breast Cancer Using DEC-MRI
+## Vasculature Analysis in Breast Cancer Using DCE-MRI
 
