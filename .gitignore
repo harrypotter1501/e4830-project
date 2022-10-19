@@ -1,5 +1,13 @@
-data/*
-report/*
-res/*
+# dataset
+data/
+
+# docs
+report/
+
+# results
+res/
+figs/
+
+# others
 *.asv
 .DS_Store
