@@ -2,3 +2,4 @@ data/*
 report/*
 res/*
 *.asv
+.DS_Store
