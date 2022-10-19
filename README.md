@@ -21,6 +21,8 @@ The project was conducted in 4 stages.
 
 ## Acknowledgement
 
+Thanks to professor Christine Hendon for the lectures and advice. 
+
 Many loves and thanks to Lucy, who has been selflessly providing professional interpretations and insights from the perspective of a clinical medical student dedicated in the diagnosis and treatment of breast cancer. 
 
 ## References
